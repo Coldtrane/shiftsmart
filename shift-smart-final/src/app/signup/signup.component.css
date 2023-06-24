@@ -1,0 +1,27 @@
+.signup-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+  }
+  
+  .card-header {
+    border-bottom: none;
+  }
+  
+  .close-icon {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .login-link {
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  .show-password-btn {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 5px;
+  }
+  

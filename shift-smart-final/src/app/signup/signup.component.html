@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <div class="col-10 d-flex">
+    </div>
+    <div class="col-2">
+      <a href="#" class="btn btn-link left-aligned-link" routerLink="/login">Login</a>
+    </div>
+  </div>
+  <div class="row mt-4 align-items-center">
+    <div class="col-12 col-sm-4"></div>
+    <div class="col-12 col-sm-4 text-center">
+      <h1>Sign Up </h1>  
+    </div>
+    <div class="col-12 col-sm-4">
+    </div>
+  </div>
+  <div class="row justify-content-center mt-3">
+    <div class="col-12 col-md-6">
+      <form (ngSubmit)="signup()" #signupForm="ngForm">
+        <div class="form-group">
+          <input
+            type="email"
+            class="form-control mb-3"
+            placeholder="Email"
+            name="email"
+            [(ngModel)]="email"
+            required
+            minlength="3"
+            maxlength="40"
+            email/>
+        </div>
+        <div class="form-group position-relative">
+          <input
+            [type]="showPassword ? 'text' : 'password'"
+            class="form-control mb-3"
+            placeholder="Password"
+            name="password"
+            [(ngModel)]="password"
+            required
+            minlength="8"
+            maxlength="40"
+          />
+          <button
+            type="button"
+            class="btn btn-link btn-sm position-absolute btn-block"
+            style="top: 50%; right: 10px; transform: translateY(-50%);"
+            (click)="togglePasswordVisibility()">
+            Show
+          </button>
+        </div>
+        <div class="form-group text-center mt-5">
+          <button type="submit" class="btn btn-primary w-100 ">Sign Up</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

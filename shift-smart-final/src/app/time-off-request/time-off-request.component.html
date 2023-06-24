@@ -1,0 +1,34 @@
+<div class="container-fluid">
+  <h3 class="mb-4 text-center">Time-Off Request</h3>
+
+  <div class="row justify-content-center align-items-start vh-100">
+    <div class="col-md-6">
+      <div class="text-center">
+        <h5 class="date-left">Vacation Date</h5>
+        <input type="text" [(ngModel)]="date" id="datepicker" class="form-control mb-4" placeholder="Select a date" />
+      </div>
+
+      <h5>Reason for Vacation Request</h5>
+      <input type="text" [(ngModel)]="reason" id="reasonField" class="form-control mb-4 bg-light" placeholder="Input text here" minlength="3" maxlength="50"/>
+
+      <button (click)="createClick()" class="btn btn-primary btn-submit d-block mx-auto">Submit</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="requestModal" tabindex="-1" aria-labelledby="requestModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="requestModalLabel">Request Accepted</h5>
+      </div>
+      <div class="modal-body">
+        <p>Vacation day set for <span id="dayField">{{submittedDate}}</span></p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" (click)="clearDateField()" data-bs-dismiss="modal">Request Another Day</button>
+        <button class="btn btn-secondary" (click)="clearDateField()" data-bs-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

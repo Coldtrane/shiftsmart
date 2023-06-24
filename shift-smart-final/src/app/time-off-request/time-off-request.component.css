@@ -1,0 +1,29 @@
+.container-fluid {
+  height: 100vh;
+}
+
+.row {
+  justify-content: center;
+  align-items: center;
+}
+
+#datepicker {
+  max-width: 100%;
+}
+
+.litepicker-wrapper {
+  position: absolute;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+#reasonField {
+  background-color: #adb5bd3d;
+}
+
+.date-left{
+  text-align: left;
+}
